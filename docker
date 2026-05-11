@@ -1,8 +1,5 @@
 .PHONY: test build deploy
 
-# User editable vars
-PLUGIN_NAME := wpengine-geoip
-
 # Shortcuts
 DOCKER_RUN := docker run --rm -v `pwd`:/workspace
 WP_TEST_IMAGE := test-image
