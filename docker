@@ -24,7 +24,7 @@ build-test:
 	--tag $(WP_TEST_IMAGE) \
 	.
 
-lint:
+mint:
 	$(DOCKER_RUN) --entrypoint "$(VENDOR_BIN_DIR)/phpcs" $(WP_TEST_IMAGE) src
 
 phpcbf:
