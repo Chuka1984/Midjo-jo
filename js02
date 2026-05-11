@@ -4,7 +4,6 @@
 		"dbaeumer.vscode-eslint",
 		"github.vscode-github-actions",
 		"unifiedjs.vscode-mdx",
-		"esbenp.prettier-vscode",
 		"bradlc.vscode-tailwindcss",
 		"graphql.vscode-graphql-syntax",
 		"graphql.vscode-graphql",
