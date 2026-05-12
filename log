@@ -36,7 +36,6 @@ if [[ -n $purge ]]; then
 		answer="Y"
 		if [[ $purge =~ ^(nginx|letsencrypt|mysql|redis)$ ]]; then
 			fol="/$purge"
-			mes="($purge) "
 		else
 			fol=""
 		fi
