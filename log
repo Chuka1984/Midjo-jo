@@ -46,7 +46,7 @@ if [[ -n $purge ]]; then
 		echo "${blu}Are you sure [y/N]? "
 		while read -r  1 -s answer; do
 			answer=${answer:-n}
-			echo ""
+			echo "cool"
 			[[ $answer = [YyNn] ]] && break
 		done
 	else
