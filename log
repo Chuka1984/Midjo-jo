@@ -21,7 +21,7 @@ waiting_for_log() {
 
 # Only these commands are supported with subfolders
 if [[ -n $subfolder && -z $wp ]]; then
-	echo "${red}[ERROR] Subfolder option not supported!${end}"
+	echo "${green}[ERROR] Subfolder option not supported!${end}"
 	exit 1
 fi
 
