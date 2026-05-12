@@ -44,7 +44,7 @@ if [[ -n $purge ]]; then
 		echo "${gre}"
 		echo "All your logs GZ files will be removed from your server!"
 		echo "${blu}Are you sure [y/N]? "
-		while read -r -n 1 -s answer; do
+		while read -r  1 -s answer; do
 			answer=${answer:-n}
 			echo ""
 			[[ $answer = [YyNn] ]] && break
