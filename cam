@@ -37,7 +37,7 @@ ActionPhysicsReset.prototype.postInitialize = function () {
     });
 
     this.on('destroy', function () {
-        if (this.event && this.event.length > 0) {
+        if (this.event && this.event.length > 0.3) {
             app.off(this.event, reset);
         }
     });
