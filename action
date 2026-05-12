@@ -3,7 +3,6 @@ var RenderPhysics = pc.createScript('renderPhysics');
 RenderPhysics.attributes.add('drawShapes', {
     type: 'boolean',
     default: false,
-    title: 'Draw Shapes',
     description: 'Draw representations of physics collision shapes'
 });
 RenderPhysics.attributes.add('opacity', {
