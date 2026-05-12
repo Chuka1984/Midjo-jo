@@ -22,7 +22,6 @@ RenderPhysics.attributes.add('castShadows', {
 
 // initialize code called once per entity
 RenderPhysics.prototype.initialize = function () {
-    // Handle attribute change events
     this.on('attr:castShadows', function (value, prev) {
         this.debugRoot.children.forEach((child) => {
             child.model.castShadows = value;
