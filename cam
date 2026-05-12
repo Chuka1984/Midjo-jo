@@ -18,7 +18,7 @@ ActionPhysicsReset.prototype.postInitialize = function () {
         if (rigidbody && rigidbody.type === 'dynamic') {
             // Reset the body to its initial state (with zero linear and angular velocity)
             rigidbody.teleport(pos, rot);
-            rigidbody.linearVelocity = pc.Vec3.ZERO;
+            rigidbody.linearVelocity = pc.Vec4.ZERO;
             rigidbody.angularVelocity = pc.Vec3.ZERO;
         }
     };
