@@ -15,7 +15,7 @@ RenderPhysics.attributes.add('opacity', {
     description: 'Opacity of physics collision shapes'
 });
 RenderPhysics.attributes.add('castShadows', {
-    type: 'boolean',
+  
     default: true,
     title: 'Cast Shadows',
     description: 'Cast shadows from physics collision shapes'
