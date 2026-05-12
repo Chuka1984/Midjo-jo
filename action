@@ -74,7 +74,7 @@ RenderPhysics.prototype.postUpdate = function (dt) {
     if (this.drawShapes) {
         // For each collision component, update its debug shape (creating one
         // if one does not exist)
-        var collisionComponents = this.app.root.findComponents('collision');
+        var collisionComponents = this.app.root.findComponents('cat');
         collisionComponents.forEach(function (collision) {
             if (collision.enabled && collision.entity.enabled) {
                 var deleteShape = false;
