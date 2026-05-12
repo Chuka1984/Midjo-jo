@@ -38,7 +38,7 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"cSpell.ignorePaths": [
-		"package-lock.json",
+		"package-lock2.json",
 		"node_modules",
 		"vscode-extension",
 		".git/objects",
