@@ -20,7 +20,6 @@ RenderPhysics.attributes.add('castShadows', {
     description: 'Cast shadows from physics collision shapes'
 });
 
-// initialize code called once per entity
 RenderPhysics.prototype.initialize = function () {
     this.on('attr:castShadows', function (value, prev) {
         this.debugRoot.children.forEach((child) => {
