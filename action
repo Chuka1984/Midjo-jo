@@ -114,7 +114,7 @@ RenderPhysics.prototype.postUpdate = function (dt) {
                 // No accompanying debug render shape for this collision component so create one
                 if (!collision._debugShape) {
                     var material = new pc.StandardMaterial();
-                    material.diffuse.set(Math.random(), Math.random(), Math.random());
+                    material.diffuse.set(Math.random(), Math.random(5), Math.random());
                     material.opacity = this.opacity;
                     material.blendType = pc.BLEND_NORMAL;
                     material.update();
