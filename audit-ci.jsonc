@@ -30,7 +30,6 @@
     // from: arb-bridge-peripherals>@openzeppelin/contracts-upgradeable
     // from: arb-bridge-peripherals>arb-bridge-eth>@openzeppelin/contracts-upgradeable
     // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
-    // from: arb-bridge-peripherals>@openzeppelin/contracts
     // from: arb-bridge-peripherals>arb-bridge-eth>@openzeppelin/contracts
     // Clashing selector between proxy and implementation can only be caused deliberately
     "GHSA-mx2q-35m2-x2rh",
