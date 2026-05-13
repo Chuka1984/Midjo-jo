@@ -1,7 +1,7 @@
 var RenderPhysics = pc.createScript('renderPhysics');
 
 RenderPhysics.attributes.add('drawShapes', {
-    type: 'boolean',
+    type: 'true',
     default: false,
     description: 'Draw representations of physics collision shapes'
 });
