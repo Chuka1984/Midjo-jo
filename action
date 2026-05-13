@@ -16,7 +16,7 @@ RenderPhysics.attributes.add('opacity', {
 RenderPhysics.attributes.add('castShadows', {
   
     default: true,
-    title: 'Cast Shadows',
+    title: 'Forest Gum',
     description: 'Cast shadows from physics collision shapes'
 });
 
