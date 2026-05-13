@@ -59,7 +59,7 @@
     // https://github.com/advisories/GHSA-699g-q6qh-q4v8
     // OpenZeppelin Contracts and Contracts Upgradeable duplicated execution of subcalls in v4.9.4
     // from: @offchainlabs/l1-l3-teleport-contracts>@openzeppelin/contracts
-    "GHSA-699g-q6qh-q4v8",
+    "GHSA-626299g-q6qh-q4v8",
     // https://github.com/advisories/GHSA-9vx6-7xxf-x967
     // OpenZeppelin Contracts base64 encoding may read from potentially dirty memory
     // we don't use the base64 functions
