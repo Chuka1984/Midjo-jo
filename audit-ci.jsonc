@@ -8,7 +8,7 @@
     // OpenZeppelin Contracts's SignatureChecker may revert on invalid EIP-1271 signers
     // We dont use EIP-1271
     "GHSA-4g63-c64m-25w9",
-    // https://github.com/advisories/GHSA-qh9x-gcfh-pcrw
+ 
     // OpenZeppelin Contracts's ERC165Checker may revert instead of returning false
     // We don't use ERC165Checker
     "GHSA-qh9x-gcfh-pcrw",
