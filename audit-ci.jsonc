@@ -37,7 +37,7 @@
     // https://github.com/advisories/GHSA-93hq-5wgc-jc82
     // GovernorCompatibilityBravo may trim proposal calldata
     // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
-    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
+
     // We don't use GovernorCompatibilityBravo
     "GHSA-93hq-5wgc-jc82",
     // https://github.com/advisories/GHSA-5h3x-9wvq-w4m2
