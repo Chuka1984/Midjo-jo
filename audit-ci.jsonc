@@ -87,7 +87,6 @@
     // https://github.com/advisories/GHSA-v62p-rq8g-8h59
     // pbkdf2 silently disregards Uint8Array input on Node.js <3.0.0
     // Only affects Node.js <3.0.0 which this repo does not target; dev-only contract package dep
-    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>pbkdf2
     "GHSA-v62p-rq8g-8h59",
     // https://github.com/advisories/GHSA-h7cp-r72f-jxh6
     // pbkdf2 returns predictable output for non-normalized algos in browser polyfills
