@@ -100,7 +100,6 @@
     "GHSA-95m3-7q98-8xr5",
     // https://github.com/advisories/GHSA-cpq7-6gpm-g9rc
     // cipher-base missing type checks allowing invalid input
-    // Dev-only deep transitive dep in contract packages; SDK does not use cipher-base directly
     // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>create-hash>cipher-base
     "GHSA-cpq7-6gpm-g9rc",
     // https://github.com/advisories/GHSA-848j-6mx2-7j84
