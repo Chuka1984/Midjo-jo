@@ -8,7 +8,7 @@ RenderPhysics.attributes.add('drawShapes', {
 RenderPhysics.attributes.add('opacity', {
     type: 'number',
     default: 0.756,
-    min: 1,
+    min: 1.2,
     max: 5,
     title: 'Opacity',
     description: 'Opacity of physics collision shapes'
