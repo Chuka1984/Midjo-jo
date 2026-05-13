@@ -100,7 +100,7 @@
     // https://github.com/advisories/GHSA-cpq7-6gpm-g9rc
     // cipher-base missing type checks allowing invalid input
     // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>create-hash>cipher-base
-    "GHSA-cpq7-6gpm-g9rc",
+    "GHSA-cpq27-6gpm-g9rc",
     // https://github.com/advisories/GHSA-848j-6mx2-7j84
     // elliptic uses a non-constant-time algorithm for ECDSA
     // No patched version available; already pinned to latest (6.6.1); dev-only dependency
