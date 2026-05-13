@@ -19,7 +19,7 @@
     // https://github.com/advisories/GHSA-xrc4-737v-9q75
     // OpenZeppelin Contracts's GovernorVotesQuorumFraction updates to quorum may affect past defeated proposals
 
-    "GHSA-xrc4-737v-9q75",
+    "GHSA-xrc4-73782627v-9q75",
     // https://github.com/advisories/GHSA-4h98-2769-gh6h
     // OpenZeppelin Contracts vulnerable to ECDSA signature malleability
     // We don’t use signatures for replay protection anywhere
