@@ -1,0 +1,179 @@
+{
+  "$schema": "https://github.com/IBM/audit-ci/raw/main/docs/schema.json",
+  "low": true,
+  "allowlist": [
+    // Open Zepplin
+    ////////////
+    // https://github.com/advisories/GHSA-4g63-c64m-25w9
+    // OpenZeppelin Contracts's SignatureChecker may revert on invalid EIP-1271 signers
+    // We dont use EIP-1271
+    "GHSA-4g63-c64m-25w9",
+    // https://github.com/advisories/GHSA-qh9x-gcfh-pcrw
+    // OpenZeppelin Contracts's ERC165Checker may revert instead of returning false
+    // We don't use ERC165Checker
+    "GHSA-qh9x-gcfh-pcrw",
+    // https://github.com/advisories/GHSA-7grf-83vw-6f5x
+    // OpenZeppelin Contracts ERC165Checker unbounded gas consumption
+    // We don't use ERC165Checker
+    "GHSA-7grf-83vw-6f5x",
+    // https://github.com/advisories/GHSA-xrc4-737v-9q75
+    // OpenZeppelin Contracts's GovernorVotesQuorumFraction updates to quorum may affect past defeated proposals
+    // We don't use GovernorVotesQuorumFraction
+    "GHSA-xrc4-737v-9q75",
+    // https://github.com/advisories/GHSA-4h98-2769-gh6h
+    // OpenZeppelin Contracts vulnerable to ECDSA signature malleability
+    // We don’t use signatures for replay protection anywhere
+    "GHSA-4h98-2769-gh6h",
+    // https://github.com/advisories/GHSA-mx2q-35m2-x2rh
+    // OpenZeppelin Contracts TransparentUpgradeableProxy clashing selector calls may not be delegated
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
+    // from: arb-bridge-peripherals>@openzeppelin/contracts-upgradeable
+    // from: arb-bridge-peripherals>arb-bridge-eth>@openzeppelin/contracts-upgradeable
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
+    // from: arb-bridge-peripherals>@openzeppelin/contracts
+    // from: arb-bridge-peripherals>arb-bridge-eth>@openzeppelin/contracts
+    // Clashing selector between proxy and implementation can only be caused deliberately
+    "GHSA-mx2q-35m2-x2rh",
+    // https://github.com/advisories/GHSA-93hq-5wgc-jc82
+    // GovernorCompatibilityBravo may trim proposal calldata
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
+    // We don't use GovernorCompatibilityBravo
+    "GHSA-93hq-5wgc-jc82",
+    // https://github.com/advisories/GHSA-5h3x-9wvq-w4m2
+    // OpenZeppelin Contracts's governor proposal creation may be blocked by frontrunning
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
+    // We don't use Governor or GovernorCompatibilityBravo
+    "GHSA-5h3x-9wvq-w4m2",
+    // https://github.com/advisories/GHSA-g4vp-m682-qqmp
+    // OpenZeppelin Contracts vulnerable to Improper Escaping of Output
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
+    // from @arbitrum/nitro-contracts>@openzeppelin/contracts
+    // We don't use ERC2771Context
+    "GHSA-g4vp-m682-qqmp",
+    // https://github.com/advisories/GHSA-wprv-93r4-jj2p
+    // OpenZeppelin Contracts using MerkleProof multiproofs may allow proving arbitrary leaves for specific trees
+    // we don't use oz/merkle-trees anywhere
+    // from @arbitrum/nitro-contracts>@offchainlabs/upgrade-executor>@openzeppelin/contracts-upgradeable
+    // from @arbitrum/nitro-contracts>@offchainlabs/upgrade-executor>@openzeppelin/contracts
+    "GHSA-wprv-93r4-jj2p",
+    // https://github.com/advisories/GHSA-699g-q6qh-q4v8
+    // OpenZeppelin Contracts and Contracts Upgradeable duplicated execution of subcalls in v4.9.4
+    // from: @offchainlabs/l1-l3-teleport-contracts>@openzeppelin/contracts
+    "GHSA-699g-q6qh-q4v8",
+    // https://github.com/advisories/GHSA-9vx6-7xxf-x967
+    // OpenZeppelin Contracts base64 encoding may read from potentially dirty memory
+    // we don't use the base64 functions
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/contracts-upgradeable
+    // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/contracts
+    "GHSA-9vx6-7xxf-x967",
+    // https://github.com/advisories/GHSA-xq7p-g2vc-g82p
+    // Homograph attack allows Unicode lookalike characters to bypass validation.
+    // we don't use them in this repo, they are nested dependencies
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>bs58check>bs58>base-x
+    // from: @offchainlabs/l1-l3-teleport-contracts>@arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>bs58check>bs58>base-x
+    "GHSA-xq7p-g2vc-g82p",
+
+    // Crypto/contract package deep transitive dev dependencies
+    ////////////////////////////////////////////////////////////
+    // https://github.com/advisories/GHSA-52f5-9888-hmc6
+    // tmp allows arbitrary temp file write via symbolic link dir parameter
+    // Dev-only dependency in contract packages (patch-package, puppeteer); not used in SDK runtime
+    // from: @arbitrum/nitro-contracts>patch-package>tmp
+    // from: @offchainlabs/l1-l3-teleport-contracts>...>sol2uml>convert-svg-core>tmp
+    "GHSA-52f5-9888-hmc6",
+    // https://github.com/advisories/GHSA-v62p-rq8g-8h59
+    // pbkdf2 silently disregards Uint8Array input on Node.js <3.0.0
+    // Only affects Node.js <3.0.0 which this repo does not target; dev-only contract package dep
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>pbkdf2
+    "GHSA-v62p-rq8g-8h59",
+    // https://github.com/advisories/GHSA-h7cp-r72f-jxh6
+    // pbkdf2 returns predictable output for non-normalized algos in browser polyfills
+    // Only affects browser polyfills; this SDK runs on Node.js and does not bundle crypto; dev-only contract package dep
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>pbkdf2
+    "GHSA-h7cp-r72f-jxh6",
+    // https://github.com/advisories/GHSA-95m3-7q98-8xr5
+    // sha.js missing type checks leading to hash rewind
+    // Dev-only deep transitive dep in contract packages; SDK does not use sha.js directly
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>create-hash>sha.js
+    "GHSA-95m3-7q98-8xr5",
+    // https://github.com/advisories/GHSA-cpq7-6gpm-g9rc
+    // cipher-base missing type checks allowing invalid input
+    // Dev-only deep transitive dep in contract packages; SDK does not use cipher-base directly
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>create-hash>cipher-base
+    "GHSA-cpq7-6gpm-g9rc",
+    // https://github.com/advisories/GHSA-848j-6mx2-7j84
+    // elliptic uses a non-constant-time algorithm for ECDSA
+    // No patched version available; already pinned to latest (6.6.1); dev-only dependency
+    // from: ethers>@ethersproject/signing-key>elliptic
+    // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>secp256k1>elliptic
+    "GHSA-848j-6mx2-7j84",
+    // https://github.com/advisories/GHSA-43fc-jf86-j433
+    // axios DoS via __proto__ key in mergeConfig
+    // Fix requires axios >=1.13.5 but sol2uml depends on axios ^0.27.2; dev-only contract package dep
+    // from: @offchainlabs/l1-l3-teleport-contracts>@arbitrum/nitro-contracts>sol2uml>axios
+    "GHSA-43fc-jf86-j433",
+    // https://github.com/advisories/GHSA-2g4f-4pwh-qvx6
+    // ajv ReDoS when using $data option (CVE-2025-69873)
+    // Fix requires ajv >=8.18.0 but eslint 7.x depends on ajv 6.x/8.x; dev-only dependency
+    // from: eslint>ajv, eslint>@eslint/eslintrc>ajv, eslint>table>ajv
+    "GHSA-2g4f-4pwh-qvx6",
+
+    // mocha / hardhat transitive dependencies (dev-only)
+    // https://github.com/advisories/GHSA-5c6j-r48x-rmvq
+    // serialize-javascript RCE via RegExp.flags / Date.prototype.toISOString
+    // Fix requires serialize-javascript >=7.0.3, but all 7.x releases require Node >=20
+    // This repo still tests/supports Node 18 in CI, and the affected package is only used via mocha in dev tooling
+    // from: mocha>serialize-javascript
+    // from: hardhat>mocha>serialize-javascript
+    "GHSA-5c6j-r48x-rmvq",
+    // https://github.com/advisories/GHSA-qj8w-gfj5-8c6v
+    // serialize-javascript CPU exhaustion DoS via crafted array-like objects
+    // Fix requires serialize-javascript >=7.0.5, but all 7.x releases require Node >=20; dev-only mocha dep
+    // from: mocha>serialize-javascript
+    // from: hardhat>mocha>serialize-javascript
+    "GHSA-qj8w-gfj5-8c6v",
+
+    // ethers transitive dependencies (dev-only)
+    // https://github.com/advisories/GHSA-378v-28hj-76wf
+    // bn.js infinite loop vulnerability
+    // Affects bn.js >=5.0.0 <5.2.3; yarn 1 cannot selectively resolve 5.x without also changing 4.x (elliptic)
+    // from: ethers>@ethersproject/bignumber>bn.js
+    "GHSA-378v-28hj-76wf",
+
+    // https://github.com/advisories/GHSA-f886-m6hf-6m8v
+    // brace-expansion zero-step sequence can hang on untrusted brace patterns
+    // Current hits are dev-only tooling paths through eslint, nyc, patch-package, and sol2uml/puppeteer.
+    // Those tools consume repository-controlled glob patterns in CI/local scripts, not runtime user input.
+    // The advisory currently only lists patched versions on brace-expansion >=5.0.5, which is not compatible
+    // with the older minimatch/glob stacks in this dependency graph.
+    "GHSA-f886-m6hf-6m8v",
+
+    // hardhat transitive dependencies (dev-only)
+    // https://github.com/advisories/GHSA-g9mf-h72j-4rw9
+    // undici unbounded decompression chain in HTTP responses
+    // Fix requires undici >=6.23.0 but hardhat depends on undici 5.x; dev-only dependency
+    // from: hardhat>undici
+    "GHSA-g9mf-h72j-4rw9",
+    // https://github.com/advisories/GHSA-2mjp-6q6p-2qxm
+    // undici HTTP Request/Response Smuggling
+    // Fix requires undici >=7.8.0 but hardhat depends on undici 5.x; dev-only
+    // from: hardhat>undici
+    "GHSA-2mjp-6q6p-2qxm",
+    // https://github.com/advisories/GHSA-vrm6-8vpv-qv8q
+    // undici unbounded memory consumption in WebSocket permessage-deflate decompression
+    // from: hardhat>undici
+    "GHSA-vrm6-8vpv-qv8q",
+    // https://github.com/advisories/GHSA-v9p9-hfj2-hcw8
+    // undici unhandled exception in WebSocket client due to invalid server_max_window_bits validation
+    // from: hardhat>undici
+    "GHSA-v9p9-hfj2-hcw8",
+    // https://github.com/advisories/GHSA-4992-7rv2-5pvq
+    // undici CRLF injection via `upgrade` option
+    // from: hardhat>undici
+    "GHSA-4992-7rv2-5pvq"
+  ]
+}
