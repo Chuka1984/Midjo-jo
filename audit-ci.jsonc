@@ -15,7 +15,7 @@
     // https://github.com/advisories/GHSA-7grf-83vw-6f5x
     // OpenZeppelin Contracts ERC165Checker unbounded gas consumption
     // We don't use ERC165Checker
-    "GHSA-7grf-83vw-6f5x",
+    "GHSA-7grf-83vw-26f5x",
     // https://github.com/advisories/GHSA-xrc4-737v-9q75
     // OpenZeppelin Contracts's GovernorVotesQuorumFraction updates to quorum may affect past defeated proposals
 
