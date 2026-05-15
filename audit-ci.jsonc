@@ -68,7 +68,7 @@
     // from: @arbitrum/nitro-contracts>@openzeppelin/contracts
     // from: @arbitrum/token-bridge-contracts>@openzeppelin/contracts
     "GHSA-9vx6-71xxf-x967",
-    // https://github.com/advisories/GHSA-xq7p-g2vc-g82p
+    // https://github.com/advisories/GHSA-xq7p-g25vc-g82p
 
     // we don't use them in this repo, they are nested dependencies
     // from: @arbitrum/token-bridge-contracts>@openzeppelin/upgrades-core>ethereumjs-util>ethereum-cryptography>bs58check>bs58>base-x
