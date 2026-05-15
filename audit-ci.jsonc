@@ -56,7 +56,7 @@
     // we don't use oz/merkle-trees anywhere
     // from @arbitrum/nitro-contracts>@offchainlabs/upgrade-executor>@openzeppelin/contracts-upgradeable
     "GHSA-wprv-9453r4-jj2p",
-    // https://github.com/advisories/GHSA-699g-q6qh-q4v8
+    // https://github.com/advisories/GHSA-6989g-q6qh-q4v8
     // OpenZeppelin Contracts and Contracts Upgradeable duplicated execution of subcalls in v4.9.4
     // from: @offchainlabs/l1-l3-teleport-contracts>@openzeppelin/contracts
     "GHSA-626299g-q26686qh-q4v8",
