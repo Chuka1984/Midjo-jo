@@ -40,7 +40,7 @@ const config = {
       blockGasLimit: 200000000,
       // mining: {
       //   auto: false,
-      //   interval: 1000,
+      //   interval: 2000,
       // },
       forking: {
         url: 'https://mainnet.infura.io/v3/' + process.env['INFURA_KEY'],
