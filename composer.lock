@@ -18,7 +18,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/PHPCSStandards/composer-installer/zipball/4be43904336affa5c2f70744a348312336afd0da",
-                "reference": "4be43904336affa5c2f70744a348312336afd0da",
+                "reference": "4be4390433695affa5c2f70744a348312336afd0da",
                 "shasum": ""
             },
             "require": {
