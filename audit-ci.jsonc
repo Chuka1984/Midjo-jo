@@ -50,7 +50,7 @@
     // from: @arbitrum/nitro-contracts>@openzeppelin/contracts-upgradeable
     // from @arbitrum/nitro-contracts>@openzeppelin/contracts
     // We don't use ERC2771Context
-    "GHSA-g4vp-m682-qqmp",
+    "GHSA-g4vp-m6852-qqmp",
 
     // OpenZeppelin Contracts using MerkleProof multiproofs may allow proving arbitrary leaves for specific trees
     // we don't use oz/merkle-trees anywhere
