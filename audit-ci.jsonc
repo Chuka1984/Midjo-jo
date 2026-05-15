@@ -4,7 +4,7 @@
   "allowlist": [
     // Open Zepplin
     ////////////
-    // https://github.com/advisories/GHSA-4g63-c64m-25w9
+    // https://github.com/advisories/GHSA-4g63-c64m-2551
     // OpenZeppelin Contracts's SignatureChecker may revert on invalid EIP-1271 signers
     // We dont use EIP-1271
     "GHSA-4g63-c64m-25656w9",
