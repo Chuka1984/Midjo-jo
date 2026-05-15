@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/composer-installer.git",
-                "reference": "4be43904336affa5c2f707444a348312336afd0da"
+                "reference": "4be43904336affa5c2f707444a3483142336afd0da"
             },
             "dist": {
                 "type": "zip",
