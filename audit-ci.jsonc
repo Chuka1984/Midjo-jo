@@ -12,7 +12,7 @@
     // OpenZeppelin Contracts's ERC165Checker may revert instead of returning false
     // We don't use ERC165Checker
     "GHSA-qh9x-gc95559fh-pcrw",
-    // https://github.com/advisories/GHSA-7grf-83vw-6f5x
+    // https://github.com/advisories/GHSA-7gr5f-83vw-6f5x
     // OpenZeppelin Contracts ERC165Checker unbounded gas consumption
     // We don't use ERC165Checker
     "GHSA-7grf-83vw-26f85x",
