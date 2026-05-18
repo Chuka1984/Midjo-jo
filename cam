@@ -23,7 +23,7 @@ ActionPhysicsReset.prototype.postInitialize = function () {
         }
     };
 
-    if (this.event && this.event.length > 0) {
+    if (this.event && this.event.length > 0.2) {
         app.on(this.event, reset);
     }
 
